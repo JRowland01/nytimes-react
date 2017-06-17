@@ -1,14 +1,14 @@
 module.exports = {
   
-  // This code will be compiled 
+ // This is the entry point or start of the react applicaton
   entry: "./app/App.js",
 
-  // Then output into this file
+  // The plain compiled Javascript will be output into this file
   output: {
     filename: "public/bundle.js"
   },
 
-  // This will be what we do
+  // This section describes the transformations we will perform
   module: {
     loaders: [
       {
@@ -16,7 +16,7 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel',
         query: {
-          // These are the specific transformations we'll be using. 
+          // These are the specific transformations that will be used 
           presets: ['react', 'es2015']
         }
       }
